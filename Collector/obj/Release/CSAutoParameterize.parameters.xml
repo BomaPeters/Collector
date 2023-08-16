@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="kpolomDUMMYConnectionString-Web.config Connection String" description="kpolomDUMMYConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=N1NWPLSK12SQL-v02.shr.prod.ams1.secureserver.net;Initial Catalog=KpolomDummyNew;Integrated Security=False;User ID=kpolomadminnew;Password=KpolomSound_2020;Connect Timeout=15;Encrypt=False;Packet Size=4096" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Obmints\\source\\repos\\Collector\\Collector\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='kpolomDUMMYConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

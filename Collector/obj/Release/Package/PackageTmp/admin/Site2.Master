@@ -1,0 +1,323 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site2.master.vb" Inherits="Collector.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>COLLECTOR</title>
+    <meta name="description" content="Raise funds to support people & events you care about.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="imgs/kpolomCOLLECTORLARGE.png">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap.min.css" />
+  
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/pe-icon-7-filled.css">
+    <link href="../fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet" />
+      <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css />
+     <style>
+  
+          #activemain{
+            color: #00c292 !important;background: #fafafa !important;
+              
+        }
+           #activemain1{
+            background: #fafafa !important; color:#03a9f3 !important;
+        }
+    #weatherWidget .currentDesc {
+        color: #ffffff!important;
+    }
+        .traffic-chart { 
+            min-height: 335px; 
+        }
+            height: 150px;
+        } 
+        #flotPie1 td {
+            padding:3px;
+        }
+        #flotPie1 table {
+            top: 20px!important;
+            right: -10px!important;
+        }
+        .chart-container {
+            display: table;
+            min-width: 270px ;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        #flotLine5  {
+             height: 105px;
+        } 
+
+        #flotBarChart {
+            height: 150px;
+        }
+        #cellPaiChart{
+            height: 160px;
+        }
+         .colorawesom {color:#FEC50B !important;
+        }
+        .colorawesomblue { color:#1CADE4 !important;
+        }
+         .update
+{
+position: fixed;
+top: 0px;
+left: 0px;
+min-height: 100%;
+min-width: 100%;
+background-image: url("../img/loading (1).gif");
+background-position:center center;
+background-repeat:no-repeat;
+background-color: white;
+z-index: 500 !important;
+opacity: 0.8;
+overflow: hidden;
+}
+          .loading-text {
+  width: 90px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 45px);
+  text-align: center;
+}
+          .yellowback { background-color:#FEC50B !important;
+        }
+                 .concave {
+    border-bottom-left-radius: 50% !important;
+    border-bottom-right-radius: 50% !important;
+}
+                 .concavebottom {
+    border-top-left-radius: 50% !important;
+    border-top-right-radius: 50% !important;
+}
+
+                 
+
+
+@media (max-width: 768px){
+
+    .right-panel .top-left, .right-panel .top-right {
+    width: 100%;
+    float: none;
+    background: transparent;
+}
+   .right-panel .top-left, .right-panel .top-right {
+    width: 100%;
+    float: none;
+    background:  inherit;
+    /*overflow:hidden;*/
+}
+}
+
+.mygrey{
+            background-color:#f1f2f7;
+        }
+        @media ( min-width: 320px) {
+            .h2title {
+                font-family: 'Linotte';
+                font-size: 5vw;
+            }
+        }
+        @media ( min-width: 480px) {
+             .h2title {
+ font-family:'Linotte';font-size:3.325vw;
+        }
+        }
+        @media ( min-width: 1200px) {
+             .h2title {
+ font-family:'Linotte';font-size:1.325vw
+        }
+        }
+         @font-face {
+               font-family:'Linotte';
+            src:url(../fonts/Linotte-SemiBold.otf);
+           
+        }
+            .pagination-ys {
+            /*display: inline-block;*/
+            padding-left: 0;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+            .pagination-ys table > tbody > tr > td {
+                display: inline;
+            }
+
+                .pagination-ys table > tbody > tr > td > a,
+                .pagination-ys table > tbody > tr > td > span {
+                    position: relative;
+                    float: left;
+                    padding: 8px 12px;
+                    line-height: 1.42857143;
+                    text-decoration: none;
+                    color: #dd4814;
+                    background-color: #ffffff;
+                    border: 1px solid #dddddd;
+                    margin-left: -1px;
+                }
+
+                .pagination-ys table > tbody > tr > td > span {
+                    position: relative;
+                    float: left;
+                    padding: 8px 12px;
+                    line-height: 1.42857143;
+                    text-decoration: none;
+                    margin-left: -1px;
+                    z-index: 2;
+                    color: #aea79f;
+                    background-color: #f5f5f5;
+                    border-color: #dddddd;
+                    cursor: default;
+                }
+
+                .pagination-ys table > tbody > tr > td:first-child > a,
+                .pagination-ys table > tbody > tr > td:first-child > span {
+                    margin-left: 0;
+                    border-bottom-left-radius: 4px;
+                    border-top-left-radius: 4px;
+                }
+
+                .pagination-ys table > tbody > tr > td:last-child > a,
+                .pagination-ys table > tbody > tr > td:last-child > span {
+                    border-bottom-right-radius: 4px;
+                    border-top-right-radius: 4px;
+                }
+
+                .pagination-ys table > tbody > tr > td > a:hover,
+                .pagination-ys table > tbody > tr > td > span:hover,
+                .pagination-ys table > tbody > tr > td > a:focus,
+                .pagination-ys table > tbody > tr > td > span:focus {
+                    color: #97310e;
+                    background-color: #eeeeee;
+                    border-color: #dddddd;
+                }
+                 .borderwidth{ border-bottom-width:5px !important; }
+        .mylinottefamily{ font-family:'Linotte'}
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body  onload="myFunction()" class="mygrey">
+    <form id="form1" runat="server">
+          <script>
+                 var myVar;
+
+                 function myFunction() {
+                     myVar = setTimeout(showPage, 3000);
+                 }
+
+                 function showPage() {
+                     document.getElementById("loader1").style.display = "none";
+                     document.getElementById("myDiv").style.display = "block";
+                 }
+          </script>
+              <div id="loader1"  class="update"> <span class=" loading-text"><img src="../img/kpolomCOLLECTOR.png"  style="height:30px;width:auto" /></span></div>
+        
+         <div class=" container-fluid">
+    <header  class="py-3  border-bottom shadow d-none   d-sm-block  bg-white mb-2" id="tophold1">
+         
+        <nav class="navbar  fixed-top     navbar-light  bg-white">
+<div class="container">
+     <a class="navbar-brand" href="Dashboard.aspx"><img src="imgs/kpolomCOLLECTORLARGE.png" alt="Logo" style="height:40px;width:auto">
+                        <small  style="margin-left:-5%" class="colorawesomblue">COLLECTOR</small>
+                    </a>
+
+    <%--<a href="../fonts/Linotte-SemiBold.otf"></a>--%>
+    <ul class="  nav ">
+                          
+                         <li class="nav-item   px-3  ">
+                             <%--nav-link--%>
+                             <a class="btn btn-sm btn-warning nav-link " href="creditcollection.aspx"  ><i class="fa fa-plus"></i> <span id="savebtnhold" runat="server">Credit Collection</span></a>
+                         </li>
+                     <%--    <li class="nav-item  ">
+                                                       <a  class="btn btn-sm  btn-primary nav-link" href="joincontrib.aspx"><i class="fa fa-puzzle-piece"></i> Join Contribution</a>
+                         </li>--%>
+                        </ul>
+</div>
+</nav>
+        </header>
+       
+    <div class="row flex-grow-sm-1 flex-grow-0">
+        
+
+        <div class="col-sm-auto flex-grow-sm-1 flex-shrink-1 flex-grow-0 sticky-top pb-sm-0 pb-3">
+            <div class=" bg-white border rounded-3 p-1 h-100 sticky-top">
+                <h6 class="d-none d-sm-block  text-white">Sticky Sidebar</h6>
+                <ul class="nav nav-pills flex-sm-column flex-row mb-auto justify-content-between text-truncate">
+                    <li class="nav-item">
+                        <a href="Dashboard.aspx" class="nav-link px-2 text-truncate text-center colorawesomblue">
+                            <i class="bi bi-house   fa-2x"></i><br />
+                            <span class=" d-sm-inline small">Home</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="collections.aspx" class="nav-link px-2 text-truncate text-center colorawesomblue"><i class="bi  bi-box-arrow-in-right fa-2x"></i><br />
+                            <span class=" d-sm-inline small">Collections</span> </a>
+                    </li>
+                    <li>
+                        <a href="customerprofile.aspx" class="nav-link px-2 text-truncate text-center colorawesomblue"><i class="bi  bi-journal-text fa-2x"></i><br />
+                            <span class=" d-sm-inline small">Users</span> </a><%--Payment --%>
+                    </li>
+                 
+                         <li>
+                             <span class="nav-link px-2 text-truncate text-center colorawesomblue">
+                                 
+                                  <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass=" d-sm-inline small  " LogoutPageUrl="~/signin.aspx" LogoutAction="Redirect" LogoutText="<i class='bi  bi-signpost fa-2x'></i><br /> LogOut" />
+                             </span>
+                         </li>
+                </ul>
+                
+            </div>
+        </div>
+
+        <div class="col-sm p-3 min-vh-100 mygrey ">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+        <header  class="py-3 mb-4 border-bottom shadow   d-sm-none    d-lg-none" id="bottomholder"><%--d-sm-none d-sm-block--%>
+            <div class="container">
+                <nav class="navbar   fixed-bottom navbar-light  bg-white align-content-lg-start">
+ <a class="navbar-brand" href="Dashboard.aspx"><img src="imgs/kpolomCOLLECTORLARGE.png" alt="Logo" style="height:40px;width:auto">
+                        <small  style="margin-left:-5%">COLLECTOR</small>
+                    </a>
+                    <ul class=" nav ">
+                          
+                         <li class="nav-item  px-3  ">
+                             <a class=" btn-sm btn-warning nav-link small" href="creditcollection.aspx"  ><i class="fa fa-plus"></i> <span id="Savebtnbelow" runat="server">Credit Collection</span></a>
+                         </li>
+                         <li class="nav-item  ">
+                                <a  class="btn-sm  btn-primary nav-link small" href="https://tawk.to/chat/60bb1c8edd60a20abbe4b082/1fjjcvqtq" target="_blank"><i class="fa   fa-comment"></i> Chat</a>
+                         </li>
+                        </ul>
+                    
+</nav>
+                
+            </div>
+        </header>
+          
+               <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12   mt-4"><p class="text-center">
+                      © Copyright 2017-2022 Kpolom. All rights reserved. <a href="../terms.aspx">Terms</a>
+                                           </p></div>
+                </div>
+</div>
+          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="../bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/themes/smoothness/jquery-ui.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js"></script>
+
+    </form>
+</body>
+</html>
