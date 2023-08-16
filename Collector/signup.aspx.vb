@@ -67,14 +67,11 @@ Public Class signup
 
             Next
             Session.Item("CID") = sb.ToString
-            'Dim pwdToHash As String = TextBox6.Text.Trim & "^Y8~JJU9"
-            'Dim hashToStoreInDatabase As String = BCrypt.Net.BCrypt.HashPassword(pwdToHash, BCrypt.Net.BCrypt.GenerateSalt())
-            Dim pwdToHash As String = Session.Item("retainer").ToString & "^Y8~JJU9"
+       
+            Dim pwdToHash As String = Session.Item("retainer").ToString & "~~^^^^^^^^"
             Dim hashToStoreInDatabase As String = BCrypt.Net.BCrypt.HashPassword(pwdToHash, BCrypt.Net.BCrypt.GenerateSalt())
 
 
-            'Dim PINToHash As String = Session.Item("pinholder") & "^Y8~JJU9"
-            'Dim PINToStoreInDatabase As String = BCrypt.Net.BCrypt.HashPassword(PINToHash, BCrypt.Net.BCrypt.GenerateSalt())
 
 
             Dim CNN As SqlConnection = New SqlConnection
