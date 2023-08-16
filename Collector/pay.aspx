@@ -460,9 +460,7 @@
         </script>
 
         <script type="text/javascript">
-        /* FLWPUBK_TEST-a0b97af1d781453d6ff6aa247dc989f0 - X*/
-            //FLWPUBK - 5729b2b564ff3853d72cfc5b18cfbcc8- X
-            //FLWPUBK_TEST-a0b97af1d781453d6ff6aa247dc989f0-X
+    
             function makePayment() {
                 var emailhold = document.getElementById('<%=HiddenField1.ClientID%>').value;
                                 var amounthold = document.getElementById('<%=HiddenField2.ClientID%>').value;
@@ -470,7 +468,7 @@
                                 var namehold = document.getElementById('<%=HiddenField4.ClientID%>').value;
                                 var collectionider = document.getElementById('<%=HiddenField5.ClientID%>').value;
                                 FlutterwaveCheckout({
-                                    public_key: "FLWPUBK-5729b2b564ff3853d72cfc5b18cfbcc8-X",
+                                    public_key: "FLWPUBK-",
                                     tx_ref: phonehold+"_"+collectionider,
                                     amount: amounthold,
                                     currency: "NGN",
@@ -493,7 +491,7 @@
                                 });
             }
         </script>
-          <script src="https://widget.sirena.app/get?token=4d35e4536a394c63a19bb8059b2c6126"></script>
+          <script src="https://widget.sirena.app/get?token="></script>
     </form>
 </body>
 </html>
